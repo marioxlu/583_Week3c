@@ -29,7 +29,7 @@ def get_keys(challenge,keyId = 0, filename = "eth_mnemonic.txt"):
     else:
         # Generate a new private key and store it
         new_account = eth_account.Account.create()
-        private_key = new_account.privateKey.hex()
+        private_key = new_account.key.hex()
         with open(filename, 'a') as file:
             file.write(f"{private_key}\n")
 
