@@ -48,7 +48,7 @@ def get_keys(challenge,keyId = 0, filename = "eth_mnemonic.txt"):
     return sig, eth_addr
 
 if __name__ == "__main__":
-    for i in range(4):
-        challenge = os.urandom(64)
-        sig, addr= get_keys(challenge=challenge,keyId=i)
-        print( addr )
+
+    challenge = os.urandom(64)
+    sig, addr= get_keys(challenge=challenge,keyId=0)
+    print( addr )
